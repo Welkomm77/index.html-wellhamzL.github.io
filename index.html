@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <title>Portfolio si Code Hub</title>
+   <link rel="stylesheet" href="style.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+   rel='stylesheet'>
+   <style>
+     @import url(https://fonts.googleapis.com/css?family=Poppins: 100,100italic, 200, 200italic, 300, 300italic, regular, italic, 50 0,500italic, 600, 600italic, 700, 700italic, 800, 800italic, 900,90 @italic);
+     *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       text-decoration: none;
+       outline: none;
+       scroll-behavior: smooth;
+       font-family: "Popping", sans-serif;
+     }
+     :root {
+       --bg-color: #111111;
+       --second-bg-color: #151515;
+       --text-color: #fff;
+       --main-color: red;
+     }
+     
+     html {
+       font-size: 62.5%; 
+       overflow-x: hidden;
+     }
+     body{
+    background-image: url('https://i.ibb.co.com/pwCfycM/desktop-wallpaper-full-black-dark-forest.jpg'); 
+    color: var(--text-color);
+    background-size: cover;
+    background-position: center;
+     }
+     
+           .header{
+        
+        position: flex;
+        top: 0;
+        left:0 ;
+        width: 100%;
+        padding: 1.5rem 8%;
+        background-color: #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+      }
+      .logo{
+        font-size: 3rem;
+        color: var(--text-color);
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+      .logo:hover{
+        transform: scale(1.1);
+      }
+      .logo span{
+        color: red;
+      }
+      .navbar a{
+        font-size: 1.8rem;
+        color: #fff;
+        margin-left: 4rem;
+        font-weight: 500;
+        transition: 0.3 ease-in-out;
+        border-bottom: 3px solid transparent;
+      }
+      .navbar a:hover,
+      .navbar a:active{
+        color: var(--maim-color);
+        border-bottom: 3px solid var(--main-color);
+      }
+      #menu-icon{
+        font-size: 3.6rem;
+        color: var(--maim-color);
+        display: none;
+      }
+      section{
+        min-height: 100vh;
+        padding: 1rem 9% 2rem;
+      }
+      .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10rem;
+      }
+      .home-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3rem;
+      }
+      span{
+        color: var(--maim-color);
+      }
+      .home-content h3{
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        font-size: 2.5rem;
+      }
+      .home-content h1{
+        font-size: 5rem;
+        font-weight: 100;
+        margin-top: 1.5rem;
+        line-height: 1;
+      }
+      .home-img img{
+        border-radius: 50%;
+        position: relative;
+        top: 12rem;
+        width 22vw;
+        box-shadow: 0 0 10px var(--main-color);
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        background-color:rgb(45,45,45 0.5);
+        backdrop-filter: blur;
+        mix-blend-mode: multiply;
+      }
+      
+      
+      .home-img img:hover{
+        box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+      }
+      .home-content p{
+        font-size: 1.5rem;
+        font-weight: 500;
+        max-width: 1000;
+      }
+      .social-icons a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.5rem;
+        height: 4.5rem;
+        background: #000;
+        border: 0.2rem solid var(--main-color);
+        font-size: 2.5rem;
+        border-radius: 10px;
+        color: var(--maim-color);
+        margin: 3rem 1.5rem 3rem 0;
+        transition: 0.3s ease-in-out;
+      }
+      .social-icons a:hover{
+        color: #fff;
+        transform: scale(1.3) translateY(-5px);
+        box-shadow: 0 0 25px var(--maim-color);
+      }
+      .btn{
+        display: inline-block;
+        padding: 1rem 2.8rem;
+        background-color: red;
+        border-radius: 4rem;
+        font-size: 1.6rem;
+        color: var(--second-bg-color);
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        color: #fff;
+      }
+      .btn:hover{
+        transition: scale(1.05);
+        box-shadow: var(--second-bg-color);
+        font-weight: 200;
+      }
+      .text-animation{
+        font-size: 34px;
+        font-weight: 600;
+        min-width: 280px;
+      }
+      .text-animation span{
+        position: relative;
+      }
+      .text-animation span:before{
+        content: "";
+        color: var(--maim-color);
+        animation: words 20s infinite;
+        
+      }
+      
+      .text-animation span:after{
+        content: "";
+        background-color: var(--bg-color);
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid var(--bg-color);
+        right: -8px;
+        animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+      }
+      @keyframes cursor{
+        to{
+          border-left: 2px solid var(--maim-color);
+        }
+      }
+      @keyframes words {
+        0%
+        20%{
+          content: "web Developer";
+        }
+        21%
+        40%{
+          content: "Graphis Designer";
+        }
+        40%
+        60%{
+          content: "UI / UX Designer";
+        }
+        61%
+        80%{
+          content: "Content Manager";
+        }
+        81%
+        1000%{
+          content: "Software Tester";
+        }
+      }
+      @keyframes typing{
+        0%,
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95%{
+          width: 0;
+          
+        }
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85%{
+          width: calc(100% + 8px);
+        }
+      }
+      @media (max-width: 1285px){
+        html {
+          font-size: 55%;
+        }
+      }
+      @media (max-width: 991px){
+        header{
+          padding: 2rem 3%;
+        }
+        section{
+          padding: 10rrm 3% 2rem;
+        }
+      }
+      @media (max-width 895px){
+        #menu-icon{
+          display: block;
+        }
+      }
+      .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0,0,0, 0.9);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left:2px solid var(--maim-color);
+        border-bottom:2px solid var(--maim-color);
+        display: none;
+      }
+      .navbar.active{
+        display: block;
+      }
+      .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: #fff;
+      }
+      .home{
+        flex-direction: column;
+        margin: 2rem 2rem;
+      }
+      .home.contact p{
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .home-img img{
+        width: 56vw;
+        margin-top: -11rem;
+      }
+      }
+      
+      /* Navigasi desktop */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navigasi mobile */
+@media only screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
+nav.mobile {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  z-index: 999;
+}
+
+nav.mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav.mobile li {
+  margin-bottom: 20px;
+}
+
+nav.mobile a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Tombol toggle */
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.toggle-button::before {
+  content: '\f0c9';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 24px;
+  color: #fff;
+}
+
+.toggle-button.active::before {
+  content: '\f00d';
+}
+.pontwit{
+  border-radius: 30%;
+  background-color: #fff;
+  font-size: 600;
+  color: red;
+  padding: 10px;
+}
+.tentang{
+  color: #fff;
+  background-color:#1a0be7 ;
+  padding: 10px;
+  border-radius: 30px;
+}
+.gif{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+
+.btn {
+ --glow-color: rgb(217, 176, 255);
+ --glow-spread-color: rgba(191, 123, 255, 0.1);
+ --enhanced-glow-color: rgb(231, 206, 255);
+ --btn-color: rgb(100, 61, 136);
+ border: .25em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 15px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+.btn::after {
+ pointer-events: none;
+ content: "";
+ position: absolute;
+ top: 120%;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: var(--glow-spread-color);
+ filter: blur(2em);
+ opacity: .7;
+ transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+.btn:hover {
+ color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+.btn:active {
+ box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-wrapper {
+  position: relative;
+  height: 38px;
+  width: 84px;
+  margin: 3px;
+}
+
+.radio-wrapper .input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+}
+
+.btn1 {
+  --primary: #ff184c;
+  --shadow-primary: #fded00;
+  --color: white;
+  --font-size: 9px;
+  --shadow-primary-hue: 180;
+  --shadow-secondary-hue: 60;
+  --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
+  --clip: polygon(11% 0, 95% 0, 100% 25%, 90% 90%, 95% 90%, 85% 90%, 85% 100%, 7% 100%, 0 80%);
+  --border: 5px;
+  --shimmy-distance: 5;
+  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
+  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+  color: var(--color);
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  letter-spacing: 3px;
+  position: relative;
+  font-weight: 900;
+  width: 100%;
+  height: 100%;
+  line-height: 38px;
+  text-align: center;
+  transition: background 0.2s, 0.3s;
+}
+
+.input:checked + .btn1 {
+  --primary: #8B00FF;
+  --shadow-primary: #00e572;
+}
+
+.input:hover + .btn1 {
+  --primary: #cc133c;
+  --font-size: 11px;
+}
+
+.btn1:after, .btn1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: var(--clip);
+  z-index: -1;
+}
+
+.btn1:before {
+  background: var(--shadow-primary);
+  transform: translate(var(--border), 0);
+}
+
+.btn1:after {
+  background: var(--primary);
+}
+
+.btn__tag {
+  position: absolute;
+  padding: 1px 4px;
+  letter-spacing: 1px;
+  line-height: 1;
+  bottom: -5%;
+  right: 5%;
+  font-weight: normal;
+  color: hsl(0, 0%, 0%);
+  font-size: var(--label-size);
+}
+
+.btn__glitch {
+  position: absolute;
+  top: calc(var(--border) * -1);
+  left: calc(var(--border) * -1);
+  right: calc(var(--border) * -1);
+  bottom: calc(var(--border) * -1);
+  background: var(--shadow-primary);
+  text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
+  clip-path: var(--clip);
+  animation: glitch 2s infinite;
+  display: none;
+}
+
+.input:hover + .btn1 .btn__glitch {
+  display: block;
+}
+
+.input:checked + .btn1 .btn__glitch {
+  display: block;
+  animation: glitch 5s infinite;
+}
+
+.btn__glitch:before {
+  content: '';
+  position: absolute;
+  top: calc(var(--border) * 1);
+  right: calc(var(--border) * 1);
+  bottom: calc(var(--border) * 1);
+  left: calc(var(--border) * 1);
+  clip-path: var(--clip);
+  background: var(--primary);
+  z-index: -1;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--clip-one);
+  }
+
+  2%, 8% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+
+  6% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+
+  9% {
+    clip-path: var(--clip-two);
+    transform: translate(0, 0);
+  }
+
+  10% {
+    clip-path: var(--clip-three);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+
+  13% {
+    clip-path: var(--clip-three);
+    transform: translate(0, 0);
+  }
+
+  14%, 21% {
+    clip-path: var(--clip-four);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+
+  25% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+
+  30% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+
+  35%, 45% {
+    clip-path: var(--clip-six);
+    transform: translate(calc(var(--shimmy-distance) * -1%));
+  }
+
+  40% {
+    clip-path: var(--clip-six);
+    transform: translate(calc(var(--shimmy-distance) * 1%));
+  }
+
+  50% {
+    clip-path: var(--clip-six);
+    transform: translate(0, 0);
+  }
+
+  55% {
+    clip-path: var(--clip-seven);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+
+  60% {
+    clip-path: var(--clip-seven);
+    transform: translate(0, 0);
+  }
+
+  31%, 61%, 100% {
+    clip-path: var(--clip-four);
+  }
+}
+
+.number {
+  background: var(--shadow-primary);
+  color: #323232;
+  font-size: 5.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: absolute;
+  width: 15px;
+  height: 6px;
+  top: 0;
+  left: 81%;
+  line-height: 6.2px;
+}
+
+
+.button3 {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.h2{
+  border-radius: 35px;
+  font-size: 20px;
+  background-color: red;
+  padding: 5px;
+}
+
+#btn4:hover,
+:focus {
+  border-radius: 50px;
+  height: 55px;
+  padding: 15px;
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
+}
+
+
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  color: #666;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+  color: #ffa723;
+}
+
+
+
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+
+
+.button7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 8px;
+  height: 34px;
+  width: 112px;
+  border: none;
+  background: #ff362b34;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.lable {
+  line-height: 20px;
+  font-size: 17px;
+  color: #FF342B;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background: #ff362b52;
+}
+
+.button:hover .svg-icon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+   </style>
+   </head>
+   <body> 
+   <header class="header"> 
+   <img src="https://i.ibb.co.com/YZ7QzrD/XOsX.gif" class="gif">
+   <a href="#home" class="logo">Well<span>Kom</span></a>
+   <button class="Btn">
+  
+  <div class="sign" > <svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+  
+  <div class="text" href="index2.html"><a href="index2.html">Logout</a></div>
+</button>
+
+
+
+   <i class="bx bx-menu" id="menu-icon"></i>
+   <nav class="navbar"> 
+   <a href="#home" class="active">Home</a>
+   <a href="#about">About</a>
+   <a href="#scrvices">Services</a>
+   <a href="#contact">contact</a> 
+   </nav>
+   </header>
+   
+   <section class="Home" id="#home"> 
+   <div class="home"> 
+   <div class="home-img"> 
+   <!--masuk kan poto kamu-->
+   <img src="https://i.ibb.co.com/sghdCjb/Background-Eraser-20240727-205551185.png"> </div> 
+   <!--+++++-->
+   <div class="home-content">
+    
+     
+     
+      <h1>
+        <!--Nama depan-->
+        M.
+        <span>
+           <!--Nama belakang-->
+          Hamzah
+          </span></h1>
+      <!--buat kata kata yang kaya gini "," jangan di hapus-->
+              <h2 class="typewrite text-white" data-period="500" data-type='[ 
+              "1.    ","Jangan biarkan masa lalu menghentikan langkahmu hari ini, karena masa depanmu masih menunggumu.","2.","Percayalah, setiap detik yang kita jalani saat ini akan membawa kita lebih dekat pada impian","3.","Kuatkan hatimu, karena kamu lebih kuat daripada yang kamu pikirkan","4.","Tetaplah santai dalam menghadapi kesulitan, karena tidak ada yang abadi","5.","Setiap langkah kecilmu adalah langkah besar menuju impianmu","6.","Kegagalan hanyalah awal dari kesuksesan yang lebih besar","7","Kesuksesan bukanlah akhir perjalanan, tapi awal dari perjuangan yang baru","8.","Tetaplah santai dalam menghadapi kesulitan, karena tidak ada yang abadi","9.","Semangat dan kerja keras tidak akan pernah mengkhianati hasil","10.","Kebahagiaan bukanlah tentang memiliki segalanya, tetapi mensyukuri apa yang sudah dimiliki" ]'>
+            <span class="wrap">Hello, World!.</span>
+        </h2>
+      
+      <h3 class="text-animation">Hacking<span></span></h3> 
+      <a href="index1.html" class="tentang">Tentang</a>
+      <p>Selamat datang di situs web saya, tempat kreativitas bertemu kode untuk membangun pengalaman digital transformatif yang mendorong batasan teknologi dan membentuk masa depan inovasi. </p> 
+      
+      <div class="social-icons">
+         <a href="https://www.facebook.com/profile.php?id=100078082917488">
+           <i class="bx bxl-facebook" onclick="alert('akan terjadi error')"></i></a> <a href="https://youtube.com/@st Code HuB">
+            <i class="bx bxl-youtube"></i></a>
+         <a href="https://www.tiktok.com/@wellkom770?_t=8oJ8tSytvmr&_r=1"> 
+         <i class="bx bxl-tiktok"></i></a>
+         <a href="#"> <i class="bx bxl-whatsapp"></i></a>
+         </div>
+         
+         <div class="container1">
+  <div class="radio-wrapper">
+    <input class="input" name="btn" id="value-1" type="radio">
+    <div class="btn1">
+      <span aria-hidden="">_</span>Cyber
+      <span class="btn__glitch" aria-hidden="">_Cyber🦾</span>
+      <label class="number">r1</label>
+    </div>
+  </div>
+  <div class="radio-wrapper">
+    <input class="input" name="btn" id="value-2" checked="true" type="radio">
+    <div class="btn1">
+      _Radio<span aria-hidden="">_</span>
+      <span class="btn__glitch" aria-hidden="">_R_a_d_i_o_</span>
+      <label class="number">r2</label>
+    </div>
+  </div>
+  <div class="radio-wrapper">
+    <input class="input" name="btn" id="value-3" type="radio">
+    <div class="btn1">
+      Buttons<span aria-hidden=""></span>
+      <span class="btn__glitch" aria-hidden="">Buttons_</span>
+      <label class="number">r3</label>
+    </div> 
+  </div>
+</div>
+
+
+         
+         
+         <button class="button7">
+  <svg class="svg-icon" fill="none" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><g stroke="#ff342b" stroke-linecap="round" stroke-width="1.5"><path d="m3.33337 10.8333c0 3.6819 2.98477 6.6667 6.66663 6.6667 3.682 0 6.6667-2.9848 6.6667-6.6667 0-3.68188-2.9847-6.66664-6.6667-6.66664-1.29938 0-2.51191.37174-3.5371 1.01468"></path><path d="m7.69867 1.58163-1.44987 3.28435c-.18587.42104.00478.91303.42582 1.0989l3.28438 1.44986"></path></g></svg>
+  <span class="lable">Repeat</span>
+</button>
+         </div> 
+         </div>
+         <hr>
+                  <div class="rating">
+                    <h3>kasih bintang</h3>
+  <input value="5" name="rate" id="star5" type="radio">
+  <label title="text" for="star5"></label>
+  <input value="4" name="rate" id="star4" type="radio">
+  <label title="text" for="star4"></label>
+  <input value="3" name="rate" id="star3" type="radio" checked="">
+  <label title="text" for="star3"></label>
+  <input value="2" name="rate" id="star2" type="radio">
+  <label title="text" for="star2"></label>
+  <input value="1" name="rate" id="star1" type="radio">
+  <label title="text" for="star1"></label>
+</div>
+         </section>
+         <script src="script.js"></script>
+       <script>
+      let menuIcon = document.querySelector('#menu-icon')
+      let navbar = document.querySelector('.navbar')
+      
+      menuIcon.onclick = () => {
+        menuIcon.classList.taggle('bx-x')
+        navbar.classList.taggle('active')
+      }
+    </script>
+    
+            <script>
+            var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+            };
+            
+            TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+            
+            if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+            
+            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+            
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+            
+            if (this.isDeleting) { delta /= 2; }
+            
+            if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+            }
+            
+            setTimeout(function() {
+            that.tick();
+            }, delta);
+            };
+            
+            window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+            };
+        </script>
+        
+   </body>
+   </html>

